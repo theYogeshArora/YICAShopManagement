@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/YICA-style.css" type="text/css">
+  <script language="JavaScript" src="js/YICA-js.js"></script>
+<body>
+
+<nav>
+        <ul>
+
+            <li><a href="mainmenu.html">	MAIN MENU</a>
+            </li>
+            <li>
+                <a href="salgen.html">Salary Generator</a>
+            </li>
+            <li>
+                <a href="item.html">Stock Info.</a>
+            </li>
+            <li>
+                <a href="emp.html">Emp. Info. </a>
+            </li>
+            <li>
+                <a href="login.html">Log Out</a>
+            </li>
+
+        </ul>
+    </nav>
+<div style="background-color: #eb5652"><h1>Invoice Generator </h1></div>
+<p><h2>Click the button to calculate the bill amount</p></h2>
+<button onclick="myFunction()">Generate Invoice</button>
+<p id="demo"></p>
+<script>
+function myFunction() 
+{
+var n = prompt("Please enter no of Items", "2");
+var i=1;
+var cost=0;
+while(i<=n)
+{
+var cost1 = prompt("Please enter the cost of item no"+i+":", "100");
+cost=parseInt(cost)+parseInt(cost1);
+
+i=i+1;
+}
+var gstp = prompt("Please enter your item gst %age", "0");
+
+var disp = prompt("Please enter your item discount %age", "0");
+
+
+var gst= cost*(gstp/100);
+
+
+var dis= cost*(disp/100);
+var amt="0";
+cost= cost-dis;
+cost= cost+gst;
+if (cost != null) {
+document.getElementById("demo").innerHTML =
+"<h2>"+"<br>"+"<br>"+"<br>"+"<hr>"+"TOTAL BILL Amount is   RS "+cost+"<br>"+"after gst of  RS "+gst+"<br>"+"and discount of  RS "+dis+"</h2>"+"<hr>";
+}
+}
+</script>
+</body>
+</html>

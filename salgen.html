@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/YICA-style.css" type="text/css">
+  <script language="JavaScript" src="js/YICA-js.js"></script>
+<body>
+
+<nav>
+        <ul>
+
+            <li><a href="mainmenu.html">	MAIN MENU</a>
+            </li>
+            <li>
+                <a href="costgen.html">Invoice Generator</a>
+            </li>
+            <li>
+                <a href="item.html">Stock Info.</a>
+            </li>
+            <li>
+                <a href="emp.html">Emp. Info. </a>
+            </li>
+            <li>
+                <a href="login.html">Log Out</a>
+            </li>
+
+        </ul>
+    </nav>
+<div style="background-color: #067655;"><h1>Salary Generator</h1></div>
+<p><h2>Click the button to calculate the Salary</p></h2>
+<button onclick="myFunction()">Generate Salary</button>
+<p id="demo"></p>
+<script>
+function myFunction() 
+{
+var b = prompt("Please enter the basic  salary", "10000");
+var ul = prompt("Please enter the no of unpaid leaves", "0");
+var d,h,p,n,i = 0;
+d=(0.6)*b;
+h=(0.3)*b;
+p=0.1*b;
+
+var g=0;
+g=parseInt(b)+parseInt(d)+parseInt(h);
+
+i=0.05*g;
+n=parseInt(g)-parseInt(p);
+var ns=n;
+var ds=0;
+ds=(n/30);
+ds=ds*ul;
+ns=n-ds;
+if (b != null) {
+document.getElementById("demo").innerHTML =
+"<h2>"+"<br>"+"<br>"+"<br>"+"<hr>"+"Gross Salary   is RS "+g+"<br>"+"Net Salary is RS "+n+"<br>"+"Net Salary after deduction  is  RS "+ns+"<br>"+"<hr>"
+
+"</h2>";
+
+
+
+}
+}
+</script>
+</body>
+</html>

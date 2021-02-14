@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+
+<style>
+body{}
+.mySlides {display:none;}
+div{margin-left:auto;margin-right:auto}
+img{width:100%;height: 260px}
+</style>
+</head>
+
+<body background="res/item/bg.png">
+<div style="max-width:500px" >
+  <img class="mySlides" src="res/item/st.jpg">
+  <img class="mySlides" src="res/item/ty.jpg">
+  <img class="mySlides" src="res/item/ea.jpg">
+  <img class="mySlides" src="res/item/ts.jpg">
+  <img class="mySlides" src="res/item/pi.jpg">
+
+</div>
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000); // Change image every x seconds
+}
+</script>
+
+</body>
+</html>

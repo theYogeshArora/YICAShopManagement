@@ -1,0 +1,9 @@
+Set-ExecutionPolicy RemoteSigned
+
+cd D:\College\SEM3\UI2\YICAShopManagement
+
+npm install -g http-server
+
+http-server
+
+/startpage.html
